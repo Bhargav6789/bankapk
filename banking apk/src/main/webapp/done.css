@@ -1,0 +1,108 @@
+@charset "UTF-8";
+	
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+*{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+body{
+	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ddd2d2d8;
+    background-image: url("123.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul{
+    position: relative;
+    transform: skewY(-15deg);   
+}
+ul li{
+    position: relative;
+    list-style: none;
+    width: 280px;
+    background-color: #401fd2;
+    padding: 30px;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+ul li:hover{
+    background-color: #401fd2;
+    transform: translateX(-50px);
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background-color: #5e73e9;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+ul li:hover::before{
+    background-color: #5e73e9;
+}
+ul li::after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #5e73e9;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+ul li:hover::after{
+    background-color: #5e73e9;
+}
+ul li a{
+    text-decoration: none;
+    color: #221f1f;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+ul li:hover a{
+    color: #f5e8e8;
+}
+ul li:last-child::after{
+    box-shadow: -120pxa 120px 20px rgba(207, 192, 192, 0);
+}
+body {
+    margin: 0;
+    padding: 0;
+    width:100vw;
+    height: 100vh;
+    background-color: #eee;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+  }
+
+  .banner video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .banner video{
+        width: 100%;
+        height: auto;
+    }
+}
